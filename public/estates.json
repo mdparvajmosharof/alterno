@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa with Ocean View",
+      "segment_name": "Residential",
+      "description": "Experience unparalleled luxury living with this stunning villa boasting panoramic ocean views. This expansive property offers spacious interiors with high ceilings and abundant natural light. The modern design seamlessly blends indoor and outdoor living spaces, creating an ideal setting for relaxation and entertainment. Enjoy resort-style amenities including a private infinity pool, lush gardens, and a state-of-the-art home theater. Located in the prestigious coastal enclave of Malibu, this villa is the epitome of coastal elegance and sophistication.",
+      "price": "$1,500,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Swimming pool", "Jacuzzi", "Gourmet kitchen", "Home theater"],
+      "image": "https://i.ibb.co/NryNjLN/luxury-villa.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Apartment in Downtown",
+      "segment_name": "Residential",
+      "description": "Welcome to urban living at its finest! This cozy apartment situated in the bustling heart of downtown New York City offers convenience and comfort. The well-appointed living space features modern finishes and ample natural light. Step outside and explore the vibrant neighborhood filled with trendy cafes, shops, and cultural attractions. With easy access to public transportation, this apartment is perfect for those seeking a dynamic city lifestyle.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "900 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["Balcony", "Fitness center", "Laundry room", "24/7 security"],
+      "image": "https://i.ibb.co/6mX6vV5/cozy-apartment.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Townhouse with Garden",
+      "segment_name": "Residential",
+      "description": "Discover modern urban living in this stylish townhouse nestled in the vibrant community of Seattle. The open-concept layout and sleek design elements create a contemporary atmosphere perfect for entertaining or everyday living. Step outside to your private garden oasis, an ideal retreat for relaxation and al fresco dining. With easy access to downtown amenities and cultural attractions, this townhouse offers the best of city living.",
+      "price": "$850,000",
+      "status": "sale",
+      "area": "2200 sq ft",
+      "location": "Seattle, Washington",
+      "facilities": ["Garden", "Open floor plan", "Attached garage", "High-end appliances"],
+      "image": "https://i.ibb.co/1mp5nd2/modern-townhouse.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Sunny Beach House",
+      "segment_name": "Residential",
+      "description": "Escape to paradise with this sunny beach house located in the vibrant community of Miami Beach. Embrace coastal living with direct access to sandy shores and sparkling waters. The bright and airy interior features a seamless flow between indoor and outdoor spaces, perfect for soaking up the sun or hosting gatherings with family and friends. With world-class amenities and breathtaking views, this beach house is your ultimate waterfront retreat.",
+      "price": "$3,200/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["Beachfront access", "Private patio", "Fully furnished", "Outdoor shower"],
+      "image": "https://i.ibb.co/9HPWv7S/beach-house.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Mountain Retreat Cabin",
+      "segment_name": "Residential",
+      "description": "Escape the hustle and bustle of city life with this charming mountain retreat nestled in the serene landscapes of Asheville. Surrounded by majestic mountains and lush forests, this cozy cabin offers a peaceful sanctuary for nature lovers. Curl up by the fireplace or step outside to enjoy panoramic views from the spacious deck. With hiking trails and outdoor adventures right at your doorstep, this cabin is the perfect escape for relaxation and rejuvenation.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1200 sq ft",
+      "location": "Asheville, North Carolina",
+      "facilities": ["Fireplace", "Deck with mountain views", "Hiking trails nearby", "Wooded surroundings"],
+      "image": "https://i.ibb.co/1mp5nd2/modern-townhouse.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "City Loft with Panoramic Views",
+      "segment_name": "Residential",
+      "description": "Elevate your urban lifestyle with this sophisticated loft apartment boasting panoramic views of the iconic San Francisco skyline. The spacious floor plan and high ceilings create a sense of openness and grandeur, while floor-to-ceiling windows flood the space with natural light. Entertain guests in style on the private roof deck overlooking the city or unwind in the luxurious master suite. With top-of-the-line amenities and a prime location in the heart of the city, this loft offers the ultimate urban retreat.",
+      "price": "$1,800,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "San Francisco, California",
+      "facilities": ["Roof deck", "Floor-to-ceiling windows", "Chef's kitchen", "Smart home technology"],
+      "image": "https://i.ibb.co/vwDzCBS/city-loft.webp"
+    },
+    {
+      "id": 7,
+      "estate_title": "Family Home with Pool",
+      "segment_name": "Residential",
+      "description": "Create lasting memories with your loved ones in this spacious family home featuring a sparkling pool and outdoor entertainment area. The open-concept layout and modern amenities make this home perfect for both relaxing and entertaining. With a prime location in the vibrant city of Austin, you'll enjoy easy access to shopping, dining, and outdoor recreation. Welcome home to your own private oasis!",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Austin, Texas",
+      "facilities": ["Swimming pool", "Covered patio", "Game room", "Walk-in closets"],
+      "image": "https://i.ibb.co/bbHzX1H/family-home.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Urban Studio Apartment",
+      "segment_name": "Residential",
+      "description": "Experience urban living at its best with this stylish studio apartment located in the heart of downtown Chicago. The efficient layout maximizes space, while modern finishes and appliances offer both comfort and convenience. Enjoy breathtaking city views from the rooftop terrace or explore the vibrant neighborhood filled with dining, shopping, and entertainment options. Whether you're a young professional or a student, this apartment is the perfect place to call home.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "600 sq ft",
+      "location": "Chicago, Illinois",
+      "facilities": ["Modern kitchenette", "Walk-in closet", "Fitness center access", "Laundry facilities on-site"],
+      "image": "https://i.ibb.co/zHW2xGc/studio-apartment.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Riverside Cottage",
+      "segment_name": "Residential",
+      "description": "Embrace the tranquil beauty of riverfront living with this charming cottage nestled along the banks of the Willamette River. Surrounded by lush greenery and scenic views, this cozy retreat offers a peaceful escape from the hustle and bustle of city life. Spend your days fishing off the private dock, relaxing on the riverside deck, or exploring the nearby nature trails. With its rustic charm and idyllic setting, this riverside cottage is the perfect place to unwind and reconnect with nature.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Portland, Oregon",
+      "facilities": ["Riverside deck", "Wood-burning fireplace", "Garden space", "Boat dock"],
+      "image": "https://i.ibb.co/W5HwHSH/riverside-cottage.jpg"
+    }
+  ]
+  
