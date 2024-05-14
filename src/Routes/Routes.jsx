@@ -14,6 +14,8 @@ import AllTouristsSpots from "../Pages/AllTouristsSpots";
 import SpotDetails from "../Pages/SpotDetails";
 import CountrySpots from "../Pages/CountrySpots";
 import Queries from "../Pages/Queries";
+import AddQuery from "../Pages/AddQuery";
+import MyQueries from "../Pages/MyQueries";
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
             },{
                 path: "/queries",
                 element: <Queries></Queries>
+            },
+            {
+                path: "/addQuery",
+                element: <PrivateRoutes><AddQuery></AddQuery></PrivateRoutes>
+            },
+            {
+                path: "/myQueries",
+                element: <PrivateRoutes><MyQueries></MyQueries></PrivateRoutes>
             },
             {
                 path:"/allTouristsSpots",
