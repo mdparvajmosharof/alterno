@@ -16,6 +16,7 @@ import CountrySpots from "../Pages/CountrySpots";
 import Queries from "../Pages/Queries";
 import AddQuery from "../Pages/AddQuery";
 import MyQueries from "../Pages/MyQueries";
+import QueryDetails from "../Pages/QueryDetails";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/myQueries",
                 element: <PrivateRoutes><MyQueries></MyQueries></PrivateRoutes>
+            },
+            {
+                path:"/queryDetails/:id",
+                element: <QueryDetails></QueryDetails>
             },
             {
                 path:"/allTouristsSpots",

@@ -6,6 +6,7 @@ import Navbar from "../Component/Navbar";
 // import { useLoaderData } from "react-router-dom";
 import AllMySpot from "./AllMySpot";
 import SCountry from "./SCountry";
+import HomeQuery from "./HomeQuery";
 
 const Home = () => {
   const [mySpots, setMySpots] = useState([]);
@@ -42,7 +43,9 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
+
+
       {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
         {estates.map((estate) => (
           <Estate key={estate.id} estate={estate}></Estate>
@@ -51,14 +54,14 @@ const Home = () => {
 
       <div className="w-full flex justify-center my-10 ">
         {" "}
-        <h1 className=" font-extrabold mx-auto text-3xl">ALL Tourists Spots</h1>
+        <h1 className=" font-extrabold mx-auto text-3xl">Recent Queries</h1>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <HomeQuery></HomeQuery>
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mySpots.map((mySpot) => (
           <AllMySpot key={mySpot._id} mySpot={mySpot}></AllMySpot>
         ))}
-      </div>
+      </div> */}
       <div>
         <div className="w-full flex justify-center my-10 ">
           {" "}

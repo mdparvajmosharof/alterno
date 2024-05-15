@@ -25,44 +25,44 @@ const Myspots = () => {
       });
   }, [user, deleted]);
 
-  const handleDelete = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Swal.fire({
-        //   title: "Deleted!",
-        //   text: "Your file has been deleted.",
-        //   icon: "success"
-        // });
-        fetch(
-          `http://localhost:5000/delete/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            // setMySpots(data);
-            if (data.deletedCount > 0) {
-              setDelete(!deleted);
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          });
-      }
-    });
-  };
+  // const handleDelete = (id) => {
+  //   Swal.fire({
+  //     title: "Are you sure?",
+  //     text: "You won't be able to revert this!",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Yes, delete it!",
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       // Swal.fire({
+  //       //   title: "Deleted!",
+  //       //   text: "Your file has been deleted.",
+  //       //   icon: "success"
+  //       // });
+  //       fetch(
+  //         `http://localhost:5000/delete/${id}`,
+  //         {
+  //           method: "DELETE",
+  //         }
+  //       )
+  //         .then((res) => res.json())
+  //         .then((data) => {
+  //           console.log(data);
+  //           // setMySpots(data);
+  //           if (data.deletedCount > 0) {
+  //             setDelete(!deleted);
+  //             Swal.fire({
+  //               title: "Deleted!",
+  //               text: "Your file has been deleted.",
+  //               icon: "success",
+  //             });
+  //           }
+  //         });
+  //     }
+  //   });
+  // };
 
   console.log(mySpots);
   return (
@@ -96,9 +96,9 @@ const Myspots = () => {
                       </Link>
                     </td>
                     <td>
-                      <Link onClick={() => handleDelete(mySpot._id)}>
+                      {/* <Link onClick={() => handleDelete(mySpot._id)}>
                         <button>Delete</button>
-                      </Link>
+                      </Link> */}
                     </td>
                   </tr>
                 </>

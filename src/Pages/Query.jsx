@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Query = ({query}) => {
 
-    const {Product_Image_Url,userName, photoURL, Date_Posted, Recommendation_Count, Query_Title, Product_Brand, Boycotting_Reason} = query;
+    const {_id, Product_Image_Url,userName, photoURL, Date_Posted, Recommendation_Count, Query_Title, Product_Brand, Boycotting_Reason} = query;
 
     const BArr = Boycotting_Reason.split(" ");
     const Boycotting_Reason_slc = BArr.length >= 10? BArr.slice(0, 10).join(" ") :  Boycotting_Reason ;
@@ -37,7 +37,7 @@ const Query = ({query}) => {
                         </button>
                         {/* <Link to="/queryDetails"><Button className="btn btn-accent">Recommend</Button></Link> */}
 
-                        <Link to="/queryDetails"><button className="btn btn-accent">Recommend</button></Link>
+                        <Link to={`/queryDetails/${_id}`}><button className="btn btn-accent">Recommend</button></Link>
                 </div>
             </div>
     </div>
