@@ -53,7 +53,6 @@ const Home = () => {
       </div> */}
 
       <div className="w-full flex justify-center my-10 ">
-        {" "}
         <h1 className=" font-extrabold mx-auto text-3xl">Recent Queries</h1>
       </div>
       <HomeQuery></HomeQuery>
