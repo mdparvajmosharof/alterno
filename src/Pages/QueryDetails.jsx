@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const QueryDetails = () => {
   const { id } = useParams();
+  const { authInfo } = useContext(AuthContext);
+  const {user } = authInfo;
   const [query, setQuery] = useState({});
   const [recommendations, setRecommendations] = useState([]);
   const [form, setForm] = useState({
@@ -39,8 +43,8 @@ const QueryDetails = () => {
       productName: query.Product_Name,
       userEmail: query.email,
       userName: query.userName,
-      recommenderEmail: 'current_user_email', // Replace with actual current user email
-      recommenderName: 'current_user_name',  // Replace with actual current user name
+      recommenderEmail: user?.email,
+      recommenderName: user?.displayName,
       datePosted: new Date().toISOString()
     };
 
