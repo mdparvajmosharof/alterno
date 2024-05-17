@@ -25,7 +25,7 @@ const HomeQuery = () => {
     return (
         <div className="dark">
 
-            {loading ? (<div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-black dark:border-violet-600 mx-auto mt-40"></div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  my-10">
+           { loading ? (<div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-black dark:border-violet-600 mx-auto mt-40"></div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  my-10">
                 {
                     recentQueries.map((query) => (<Query query={query}></Query>))
                 }
