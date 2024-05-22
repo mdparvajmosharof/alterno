@@ -14,7 +14,7 @@ const Resister = () => {
     document.title = "Alterno | Register";
   }, []);
 
-  const [passwordShow, setPasswordShow] = useState(true);
+  const [passwordShow, setPasswordShow] = useState(false);
   // const dataSet = useContext(AuthContext)
   // const [resisterSuccess, setResisterSuccess] = useState("");
   // const [resisterError, setResisterError] = useState("");
@@ -91,7 +91,7 @@ const Resister = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-emerald-50 dark:bg-gray-50 dark:text-gray-800">
+      <div className="w-full card shadow-xl mx-auto max-w-md p-8 space-y-3 rounded-xl">
         <h1 className="text-2xl font-bold text-center">Resister Please</h1>
         <form
           onSubmit={handleResister}
@@ -164,12 +164,12 @@ const Resister = () => {
         </form>
 
         <p className="text-xs text-center sm:px-6 dark:text-gray-600">
-          Already have an account?
+          Already have an account? 
           <Link
             to="/login"
             rel="noopener noreferrer"
             href="#"
-            className="text-green-700 font-bold text-xl dark:text-gray-800"
+            className="text-green-700 font-bold text-xl dark:text-blue-800"
           >
             Log In
           </Link>

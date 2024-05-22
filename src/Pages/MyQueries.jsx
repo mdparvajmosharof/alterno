@@ -14,7 +14,7 @@ const MyQueries = () => {
   const { user } = authInfo;
 
   useEffect(()=>{
-    axios.get( `http://localhost:5000/myspots/${user?.email}`)
+    axios.get( `http://localhost:5000/queries/${user?.email}`)
     .then(res => {
         console.log(res.data);
         setMyQueries(res.data)
@@ -116,7 +116,7 @@ const MyQueries = () => {
                         </div>
                       <div className="w-full ">
                       <Link className="w-full btn" onClick={() => handleDelete(myQuery._id)}>
-                        <button>Delete {myQuery._id}</button>
+                        <button>Delete </button>
                       </Link>
                       </div>
                         </div>

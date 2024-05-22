@@ -87,7 +87,7 @@ const Login = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mx-auto">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl card shadow-xl mx-auto">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
           onSubmit={handleLogIn}

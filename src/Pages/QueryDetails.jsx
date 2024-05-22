@@ -1,4 +1,3 @@
-
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -9,7 +8,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const QueryDetails = () => {
   const { id } = useParams();
   const { authInfo } = useContext(AuthContext);
-  const {user } = authInfo;
+  const { user } = authInfo;
   const [query, setQuery] = useState({});
   const [recommendations, setRecommendations] = useState([]);
   const [form, setForm] = useState({
@@ -29,6 +28,8 @@ const QueryDetails = () => {
       .then((data) => setRecommendations(data));
   }, [id]);
 
+  console.log(recommendations)
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -45,7 +46,7 @@ const QueryDetails = () => {
       userName: query.userName,
       recommenderEmail: user?.email,
       recommenderName: user?.displayName,
-      datePosted: new Date().toISOString()
+      datePosted: new Date(Date.now()).toLocaleString()
     };
 
     fetch('http://localhost:5000/recommendations', {
@@ -65,15 +66,10 @@ const QueryDetails = () => {
             timer: 1500,
           });
 
-          fetch(`http://localhost:5000/update-recommendation-count/${id}`, {
-            method: 'PATCH'
-          })
+          // Fetch recommendations again after adding a new one
+          fetch(`http://localhost:5000/recommendations/${id}`)
             .then(res => res.json())
-            .then(() => {
-              fetch(`http://localhost:5000/recommendations/${id}`)
-                .then(res => res.json())
-                .then(data => setRecommendations(data));
-            });
+            .then(data => setRecommendations(data));
         }
       });
   };
@@ -218,13 +214,42 @@ const QueryDetails = () => {
         </form>
       </div>
 
+      <div className="my-10 p-6 space-y-6">
+        <h2 className="text-2xl font-bold">Recommendations</h2>
+        {recommendations.map(rec => (
+          <div key={rec._id} className="p-4 rounded-lg shadow-md card">
+            <div className="flex space-x-4">
+              <img
+                alt=""
+                src={rec.recommendedProductImage}
+                className="object-cover w-12 h-12 rounded-full shadow bg-gray-500 dark:bg-gray-500"
+              />
+              <div className="flex flex-col space-y-1">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="text-sm font-semibold"
+                >
+                  {rec.recommendationTitle}
+                </a>
+                <span className="text-xs text-gray-600 dark:text-gray-400">
+                  {rec.datePosted}
+                </span>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {rec.recommendedProductName}
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {rec.recommendationReason}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <Footer />
     </div>
   );
 };
 
 export default QueryDetails;
-
-
-
-

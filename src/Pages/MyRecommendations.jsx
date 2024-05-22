@@ -17,6 +17,8 @@ const MyRecommendations = () => {
       });
   }, [user?.email]);
 
+
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -62,13 +64,13 @@ const MyRecommendations = () => {
         <tbody>
           {recommendations.map((recommendation) => (
             <tr key={recommendation._id} className="hover">
-              <td>{recommendation.Recommendation_Title}</td>
-              <td>{recommendation.Recommended_product_Name}</td>
-              <td>{recommendation.Recommendation_reason}</td>
+              <td>{recommendation.recommendationTitle}</td>
+              <td>{recommendation.recommendedProductName}</td>
+              <td>{recommendation.recommendationReason}</td>
               <td>
                 <img
-                  src={recommendation.Recommended_Product_Image}
-                  alt={recommendation.Recommended_product_Name}
+                  src={recommendation.recommendedProductImage}
+                  alt={recommendation.recommenderNamerecommendedProductName}
                   style={{ width: "50px", height: "50px" }}
                 />
               </td>
