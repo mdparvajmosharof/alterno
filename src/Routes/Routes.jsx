@@ -5,7 +5,6 @@ import Login from "../Pages/Login";
 import Error from "../Pages/Error";
 import Resister from "../Pages/Resister";
 import PrivateRoutes from "./PrivateRoutes";
-import EstateDetails from "../Component/EstateDetails";
 import Queries from "../Pages/Queries";
 import AddQuery from "../Pages/AddQuery";
 import MyQueries from "../Pages/MyQueries";
@@ -24,10 +23,6 @@ const router = createBrowserRouter([
                 path:"/",
                 element:<Home></Home>,
                 loader: () => fetch('/estates.json')
-            },{
-                path:"/estate/:id",
-                element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
-                loader:() => fetch('/estates.json')
             },{
                 path: "/queries",
                 element: <Queries></Queries>
