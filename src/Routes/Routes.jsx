@@ -8,7 +8,6 @@ import PrivateRoutes from "./PrivateRoutes";
 import EstateDetails from "../Component/EstateDetails";
 import InquiryForm from "../Pages/InquiryForm";
 import AddTouristsSpots from "../Pages/AddTouristsSpots";
-import Myspots from "../Pages/Myspots";
 import UpdateSpot from "../Pages/UpdateSpot";
 import AllTouristsSpots from "../Pages/AllTouristsSpots";
 import SpotDetails from "../Pages/SpotDetails";
@@ -75,9 +74,6 @@ const router = createBrowserRouter([
                 element:<PrivateRoutes><AddTouristsSpots></AddTouristsSpots></PrivateRoutes>
             },
             {
-                path:"/mySpots",
-                element: <PrivateRoutes><Myspots></Myspots></PrivateRoutes>
-            },{
                 path: "/update/:id",
                 element: <PrivateRoutes><UpdateSpot></UpdateSpot></PrivateRoutes>
             },

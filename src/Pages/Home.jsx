@@ -7,6 +7,7 @@ import Navbar from "../Component/Navbar";
 import AllMySpot from "./AllMySpot";
 import SCountry from "./SCountry";
 import HomeQuery from "./HomeQuery";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [mySpots, setMySpots] = useState([]);
@@ -43,8 +44,22 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      {/* <Banner></Banner> */}
+      <Banner></Banner>
 
+
+      <div className="p-6 py-12 bg-emerald-600 text-gray-50 my-10 rounded-xl ">
+                <div className="container mx-auto">
+                    <div className="flex flex-col lg:flex-row items-center justify-between">
+                        <h2 className="text-center text-6xl tracking-tighter font-bold">
+                            <br className="sm:hidden" />
+                        </h2>
+                        <div className="space-x-2 text-center py-2 lg:py-0">
+                            <span>Dive into our 'All Queries' section for a curated collection of captivating topics and diverse perspectives. Explore, learn, and discover!</span>
+                        </div>
+                        <Link to="/queries"><button className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-900 text-gray-50 border-gray-600">ALL Query</button></Link>
+                    </div>
+                </div>
+            </div>
 
       {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
         {estates.map((estate) => (
@@ -61,17 +76,7 @@ const Home = () => {
           <AllMySpot key={mySpot._id} mySpot={mySpot}></AllMySpot>
         ))}
       </div> */}
-      <div>
-        <div className="w-full flex justify-center my-10 ">
-          {" "}
-          <h1 className=" font-extrabold mx-auto text-3xl">Country</h1>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {country.map((sCountry) => (
-            <SCountry key={sCountry._id} sCountry={sCountry}></SCountry>
-          ))}
-        </div>
-      </div>
+     
 
       {/* gall */}
 
@@ -79,8 +84,8 @@ const Home = () => {
 
       {/* ask question */}
 
-      <div className="my-20 rounded-xl">
-        <section className="py-6 bg-gray-800  text-gray-50  rounded-xl">
+      <div className="my-20 card shadow-xl rounded-xl">
+        <section className="py-6   rounded-xl">
           <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
             <div className="py-6 md:py-0 md:px-6">
               <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -167,7 +172,7 @@ const Home = () => {
       </div>
 
       <div>
-        <section className="p-6 my-6 bg-gray-800  text-gray-100 ">
+        <section className="p-6 my-6 card shadow-xl">
           <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
             <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-gray-900  text-gray-100 ">
               <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-violet-400 ">
@@ -175,7 +180,7 @@ const Home = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   fill="currentColor"
-                  className="h-9 w-9 text-gray-800 "
+                  className="h-9 w-9  "
                 >
                   <polygon points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"></polygon>
                   <path d="M176.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,176.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,176.984,464.344Z"></path>
@@ -250,7 +255,7 @@ const Home = () => {
       {/* reting */}
 
       <div>
-        <div className="flex flex-col w-full p-8 shadow-sm rounded-xl lg:p-12 bg-gray-900  text-gray-100 ">
+        <div className="flex flex-col w-full p-8 shadow-xl rounded-xl lg:p-12 card ">
           <div className="flex flex-col w-full">
             <h2 className="text-3xl font-semibold text-center">
               Customer reviews

@@ -20,18 +20,17 @@ const Banner = () => {
           <div className="card w-full bg-base-100 shadow-xl image-full">
             <figure>
               <img
-                src="https://i.ibb.co/X4g3YMR/ali-maah-zy-Oe-Em4-Ns-PM-unsplash.jpg"
+                src="https://i.ibb.co/YT7mR1V/christopher-gower-m-HRf-Lhg-ABo-unsplash.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body flex justify-center items-center">
               <div className="flex justify-center flex-col items-center gap-16">
                 <h2 className="card-title text-5xl font-extrabold text-white ">
-                  OUR AVAILABE TOURSITS SPOTS
+                Your Voice Matters
                 </h2>
-                <div className="card-actions ">
-                  <Link to="/alltouristsspots"><button className="btn btn-primary">ALL Torists Spots</button></Link>
-                </div>
+                <p className="text-white font-bold text-2xl">Alterno empowers you to ask, share, and connect. Your queries drive our community forward.</p>
+                
               </div>
             </div>
           </div>
@@ -40,18 +39,16 @@ const Banner = () => {
         <div className="card w-full bg-base-100 shadow-xl image-full">
             <figure>
               <img
-                src="https://i.ibb.co/PwY6Lfk/bradley-prentice-d-YER-zr-GCm-I-unsplash.jpg"
+                src="https://i.ibb.co/MN5gcHK/kari-shea-1-SAnr-Ixw5-OY-unsplash.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body flex justify-center items-center">
               <div className="flex justify-center flex-col items-center gap-16">
                 <h2 className="card-title text-5xl font-extrabold text-white ">
-                  ADD YPUR FAV TOURSITS SPOTS
+                Innovative Solutions
                 </h2>
-                <div className="card-actions ">
-                  <Link to="/addtouristsspots"><button className="btn btn-primary">Add Torists Spots</button></Link>
-                </div>
+                <p className="font-bold text-2xl text-white">Explore creative answers and unique solutions to the questions that matter most to you.</p>
               </div>
             </div>
           </div>
@@ -60,18 +57,18 @@ const Banner = () => {
         <div className="card w-full bg-base-100 shadow-xl image-full">
             <figure>
               <img
-                src="https://i.ibb.co/gVrhXry/shlomo-shalev-Go-PYSBv-Z-QQ-unsplash.jpg"
+                src="https://i.ibb.co/Dtjd0s5/unsplash-Nu-FUbft-Uu-s-unsplash.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body flex justify-center items-center">
               <div className="flex justify-center flex-col items-center gap-16">
                 <h2 className="card-title text-5xl font-extrabold text-white ">
-                  VISIT TO YOUR ADDED TOURSITS SPOTS
+                Always Learning
                 </h2>
-                <div className="card-actions ">
-                  <Link to="/myspots"><button className="btn btn-primary">My Torists Spots</button></Link>
-                </div>
+                <p className="text-white text-2xl font-bold">
+                Alterno is a place for continuous learning and growth, driven by the curiosity and expertise of our community.
+                </p>
               </div>
             </div>
           </div>

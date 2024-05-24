@@ -13,6 +13,8 @@ const MyQueries = () => {
     const { authInfo } = useContext(AuthContext);
   const { user } = authInfo;
 
+  console.log(myQueries)
+
   useEffect(()=>{
     axios.get( `http://localhost:5000/queries/${user?.email}`)
     .then(res => {
@@ -98,33 +100,34 @@ const MyQueries = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-20 ">
-                {
-                    myQueries.map(myQuery => (
-                        <>
-                        <div className="card shadow-2xl p-5">
-                        <p>{myQuery.Product_Brand}</p>
-                    <h2 className="mb-1 h-14  font-extrabold">{myQuery.Query_Title}</h2>
-                    <div className="my-4">
-                        <Link to={`/queryDetails/${myQuery._id}`}><button className="btn w-full">Query Details</button></Link>
-                    </div>
-                        <div className="flex gap-5 ">
-                        <div className="w-full">
-                        <Link className="w-full btn" to={`/update/${myQuery._id}`}>
-                        <button>Update</button>
-                      </Link>
-                        </div>
-                      <div className="w-full ">
-                      <Link className="w-full btn" onClick={() => handleDelete(myQuery._id)}>
-                        <button>Delete </button>
-                      </Link>
-                      </div>
-                        </div>
-                        </div>
-                        </>
-                    ))
-                }
-            </div>
+          
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-20 ">
+            {
+              myQueries.map(myQuery => (
+                  <>
+                  <div className="card shadow-2xl p-5">
+                  <p>{myQuery.Product_Brand}</p>
+              <h2 className="mb-1 h-14  font-extrabold">{myQuery.Query_Title}</h2>
+              <div className="my-4">
+                  <Link to={`/queryDetails/${myQuery._id}`}><button className="btn w-full">Query Details</button></Link>
+              </div>
+                  <div className="flex gap-5 ">
+                  <div className="w-full">
+                  <Link className="w-full btn" to={`/update/${myQuery._id}`}>
+                  <button>Update</button>
+                </Link>
+                  </div>
+                <div className="w-full ">
+                <Link className="w-full btn" onClick={() => handleDelete(myQuery._id)}>
+                  <button>Delete </button>
+                </Link>
+                </div>
+                  </div>
+                  </div>
+                  </>
+                ))
+            }
+        </div>
 
             
         </div>
