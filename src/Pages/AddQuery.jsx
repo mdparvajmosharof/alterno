@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Navbar from "../Component/Navbar";
 import Swal from "sweetalert2";
+import Footer from "../Component/Footer";
 
 
 const AddQuery = () => {
@@ -129,6 +130,8 @@ const AddQuery = () => {
                         </div>
                     </form></div>
             </div>
+
+            <Footer></Footer>
 
         </div>
     )
