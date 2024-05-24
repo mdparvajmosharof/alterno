@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
 
 const RecommendationsForMe = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -58,6 +59,9 @@ const RecommendationsForMe = () => {
         </tbody>
       </table>
       </div>
+
+          <Footer></Footer>
+
     </div>
   );
 };
