@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../Component/Navbar";
 import axios from "axios";
 import Query from "./Query";
+import Footer from "../Component/Footer";
 
 const Queries = () => {
 
@@ -48,6 +49,9 @@ const Queries = () => {
                     queries.map((query) => (<Query query={query}></Query>))
                 }
             </div>)}
+
+
+            <Footer></Footer>
 
         </div>
     )

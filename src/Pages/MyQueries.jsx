@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Footer from "../Component/Footer";
 
 
 const MyQueries = () => {
@@ -129,6 +130,7 @@ const MyQueries = () => {
             }
         </div>
 
+            <Footer></Footer>
             
         </div>
     )
