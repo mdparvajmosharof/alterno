@@ -4,8 +4,6 @@ import Banner from "../Component/Banner";
 import Footer from "../Component/Footer";
 import Navbar from "../Component/Navbar";
 // import { useLoaderData } from "react-router-dom";
-import AllMySpot from "./AllMySpot";
-import SCountry from "./SCountry";
 import HomeQuery from "./HomeQuery";
 import { Link } from "react-router-dom";
 
