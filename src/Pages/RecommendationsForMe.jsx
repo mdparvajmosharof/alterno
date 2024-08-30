@@ -11,7 +11,7 @@ const RecommendationsForMe = () => {
   const {email} = user;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/recommendationsforme/${email}`)
+    fetch(`https://alterno-server.vercel.app/recommendationsforme/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setRecommendations(data);

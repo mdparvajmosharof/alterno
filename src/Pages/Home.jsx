@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/myspots`
+      `https://alterno-server.vercel.app/myspots`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -28,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/country"
+      "https://alterno-server.vercel.app/country"
     )
       .then((res) => res.json())
       .then((data) => {

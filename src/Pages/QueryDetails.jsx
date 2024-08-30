@@ -19,11 +19,11 @@ const QueryDetails = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/update/${id}`)
+    fetch(`https://alterno-server.vercel.app/update/${id}`)
       .then((res) => res.json())
       .then((data) => setQuery(data));
 
-    fetch(`http://localhost:5000/recommendations/${id}`)
+    fetch(`https://alterno-server.vercel.app/recommendations/${id}`)
       .then((res) => res.json())
       .then((data) => setRecommendations(data));
   }, [id]);
@@ -49,7 +49,7 @@ const QueryDetails = () => {
       datePosted: new Date(Date.now()).toLocaleString()
     };
 
-    fetch('http://localhost:5000/recommendations', {
+    fetch('https://alterno-server.vercel.app/recommendations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const QueryDetails = () => {
           });
 
           // Fetch recommendations again after adding a new one
-          fetch(`http://localhost:5000/recommendations/${id}`)
+          fetch(`https://alterno-server.vercel.app/recommendations/${id}`)
             .then(res => res.json())
             .then(data => setRecommendations(data));
         }

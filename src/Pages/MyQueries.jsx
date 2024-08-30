@@ -17,7 +17,7 @@ const MyQueries = () => {
   console.log(myQueries)
 
   useEffect(()=>{
-    axios.get( `http://localhost:5000/queries/${user?.email}`)
+    axios.get( `https://alterno-server.vercel.app/queries/${user?.email}`)
     .then(res => {
         console.log(res.data);
         setMyQueries(res.data)
@@ -41,7 +41,7 @@ const MyQueries = () => {
           icon: "success"
         });
         fetch(
-          `http://localhost:5000/delete/${id}`,
+          `https://alterno-server.vercel.app/delete/${id}`,
           {
             method: "DELETE",
           }
@@ -64,7 +64,7 @@ const MyQueries = () => {
 
 
     // fetch(
-    //     `http://localhost:5000/delete/${id}`,
+    //     `https://alterno-server.vercel.app/delete/${id}`,
     //     {
     //       method: "DELETE",
     //     }

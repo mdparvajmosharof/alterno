@@ -10,7 +10,7 @@ const MyRecommendations = () => {
   const {user} = authInfo;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myrecommendations/${user?.email}`)
+    fetch(`https://alterno-server.vercel.app/myrecommendations/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setRecommendations(data);
@@ -31,7 +31,7 @@ const MyRecommendations = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/recommendation/${id}`, {
+        fetch(`https://alterno-server.vercel.app/recommendation/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

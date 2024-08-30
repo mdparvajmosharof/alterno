@@ -31,7 +31,7 @@ const AddQuery = () => {
         console.log(QueriesData);
 
         fetch(
-            "http://localhost:5000/queries",
+            "https://alterno-server.vercel.app/queries",
             {
                 method: "POST",
                 headers: {

@@ -10,7 +10,7 @@ const HomeQuery = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/queries')
+        axios.get('https://alterno-server.vercel.app/queries')
             .then(res => {
                 console.log(res.data);
                 setQueries(res.data);
