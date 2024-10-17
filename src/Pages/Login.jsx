@@ -175,9 +175,9 @@ const Login = () => {
             to="/resister"
             rel="noopener noreferrer"
             href="#"
-            className=" text-blue-800 font"
+            className="btn btn-link"
           >
-            Resister
+            Register
           </Link>
         </p>
       </div>

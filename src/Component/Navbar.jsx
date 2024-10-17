@@ -2,10 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Tooltip } from 'react-tooltip'
+import { ThemeContext } from "../Provider/ThemeProvider";
 
 const Navbar = () => {
   const { authInfo } = useContext(AuthContext);
   const { logOut, user } = authInfo;
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   const handleSignOut = () => {
     console.log("log out click");
     logOut()
@@ -15,25 +18,22 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
 
-  const [theme, setTheme] = useState('dark');
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
-  useEffect(() => {
-    document.querySelector('html').setAttribute('data-theme', theme);
-  }, [theme]);
+  const navClass = ({ isActive }) => 
+    isActive
+      ? "btn btn-success h-8 min-h-8"
+      : "btn btn-accent h-8 min-h-8";
 
   const Navlinks = (
     <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
+      <NavLink className={navClass}
+        to="/">
+        <li >Home</li>
+      </NavLink>
       {/* <li>
         <NavLink to="/inquiryForm">Inquiry Form</NavLink>
       </li> */}
       <li>
-        <NavLink to="/queries">Queries</NavLink>
+        <NavLink to={"/queries"} className={navClass}>Queries</NavLink>
       </li>
       {
         user ? <><li>

@@ -91,6 +91,9 @@ const Resister = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <div>
+        
+      </div>
       <div className="w-full card shadow-xl mx-auto max-w-md p-8 space-y-3 rounded-xl">
         <h1 className="text-2xl font-bold text-center">Resister Please</h1>
         <form
@@ -169,8 +172,7 @@ const Resister = () => {
             to="/login"
             rel="noopener noreferrer"
             href="#"
-            className="text-green-700 font-bold text-xl dark:text-blue-800"
-          >
+            className="btn btn-link btn-success">
             Log In
           </Link>
         </p>
